@@ -1,8 +1,8 @@
 function MapCanvas() {
   return (
-    <div>
-      <p></p>
-    </div>
+    <canvas className="bg-sky-300 w-full rounded-lg my-6">
+
+    </canvas>
   );
 }
 
