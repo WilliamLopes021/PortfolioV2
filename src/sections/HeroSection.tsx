@@ -10,6 +10,7 @@ import { IoLogoReact } from "react-icons/io5";
 import Button from "../components/Button";
 import MinIcon from "../components/MinIcon";
 import { socialLinks } from "../data/socialLinks";
+import HeroCanvas from "../components/ThreeJs/HeroCanvas";
 
 function HeroSection() {
   const tecnologies = [
@@ -23,25 +24,23 @@ function HeroSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center jutify-center py-15 px-10 gap-5">
-      <span className="font-medium">
+    <section className="flex flex-col items-center justify-center py-15 px-10 gap-5 xl:px-90">
+      <span className="font-medium text-xl">
         Desenvolvedor Full Stack | Analista de Sistemas{" "}
       </span>
-      <span>Olá, meu nome é </span>
+      <span className="text-xl font-normal">Olá, meu nome é </span>
       <h1 className="text-7xl">Gabriel William</h1>
-      <h2 className="text-center">
+      <h2 className="text-center text-lg">
         Um estudante de tecnologia autodidata que busca a excelência no
         desenvolvimento de softwares, tendo como objetivo implementar soluções
         digitais de forma inovadora e escalável!
       </h2>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {tecnologies.map((value) => {
           return (
-            <div key={value.tecnology} className="flex">
-              <span className="flex items-center gap-2">
+              <span key={value.tecnology} className="flex items-center gap-2 rounded-xl bg-sky-100 p-1.5">
                 {value.icon} {value.tecnology}
               </span>
-            </div>
           );
         })}
       </div>
@@ -54,6 +53,10 @@ function HeroSection() {
         <MinIcon icon={<FaInstagram size={25} />} url={socialLinks.instagram} />
         <MinIcon icon={<CiMail size={25} />} url={"#contato"} />
         <MinIcon icon={<FiLinkedin size={25} />} url={socialLinks.linkedin} />
+      </div>
+
+      <div className="size-full absolute inset-0">
+        <HeroCanvas />
       </div>
     </section>
   );
