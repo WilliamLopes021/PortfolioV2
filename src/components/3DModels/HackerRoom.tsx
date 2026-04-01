@@ -1,7 +1,8 @@
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import type { GLTF } from "three-stdlib";
-import type { JSX } from "react";
+import { useRef, type JSX } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -20,11 +21,30 @@ type GLTFResult = GLTF & {
 };
 
 const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
+  const ref = useRef<THREE.Group>(null!);
+  const { pointer } = useThree();
+
+  console.log(pointer);
+  useFrame(() => {
+    if (!ref.current) return;
+
+    const intensity = 0.05;
+
+    // define alvo
+    const targetY = pointer.y * intensity;
+    const targetX = pointer.x * intensity;
+
+    // suaviza movimento
+    ref.current.rotation.x += (ref.current.rotation.x * targetY) / 2;
+    ref.current.rotation.y += (ref.current.rotation.y * targetX) / 2;
+  });
+
   const { nodes, materials } = useGLTF(
-    "/HackerRoom.glb",
+    "/models/HackerRoom.glb",
   ) as unknown as GLTFResult;
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={ref}>
       <group scale={0.01}>
         <group position={[-34.318, 228.922, 250.863]}>
           <group position={[-19.58, -129.73, -69.708]}>
@@ -61,6 +81,6 @@ const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
   );
 };
 
-useGLTF.preload("/HackerRoom.glb");
+useGLTF.preload("/models/HackerRoom.glb");
 
 export default HackerRoom;
