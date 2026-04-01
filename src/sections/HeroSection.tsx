@@ -24,7 +24,7 @@ function HeroSection() {
   ];
 
   return (
-    <section className="w-full min-h-screen relative mb-30 pointer-events-none">
+    <section className="w-full relative mb-30 pointer-events-none">
       <div className="absolute inset-0 z-0">
         <HeroCanvas />
       </div>

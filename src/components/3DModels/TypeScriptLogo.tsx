@@ -26,7 +26,7 @@ const TypeScriptLogo = (props: JSX.IntrinsicElements["group"]) => {
     "/models/ts-logo.glb",
   ) as unknown as GLTFResult;
   return (
-    <Float>
+    <Float floatingRange={[-0.05, 0.05]} rotationIntensity={0.5}>
       <group {...props} dispose={null}>
         <mesh
           geometry={nodes.TypeScriptsvg001.geometry}

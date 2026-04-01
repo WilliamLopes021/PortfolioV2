@@ -20,8 +20,8 @@ const ReactLogo = (props: JSX.IntrinsicElements["group"]) => {
   useGSAP(() => {
     gsap.to(reactLogoRef.current.position, {
       y: reactLogoRef.current.position.y + 0.5,
-      x: reactLogoRef.current.position.x + 5,
-      duration: 10.5,
+      x: reactLogoRef.current.position.x + 1,
+      duration: 6.5,
       repeat: -1,
       yoyo: true,
     });

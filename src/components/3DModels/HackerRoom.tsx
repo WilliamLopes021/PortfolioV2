@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import type { GLTF } from "three-stdlib";
-import { useRef, type JSX } from "react";
+import { useRef, useEffect, type JSX } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
@@ -22,21 +22,24 @@ type GLTFResult = GLTF & {
 
 const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
   const ref = useRef<THREE.Group>(null!);
+  const baseLocation = useRef<THREE.Euler | null>(null);
+
   const { pointer } = useThree();
 
-  console.log(pointer);
-  useFrame(() => {
+  useEffect(() => {
     if (!ref.current) return;
 
-    const intensity = 0.05;
+    baseLocation.current = ref.current.rotation.clone();
+  }, []);
 
-    // define alvo
-    const targetY = pointer.y * intensity;
-    const targetX = pointer.x * intensity;
+  useFrame(() => {
+    if (!ref.current || !baseLocation.current) return;
 
-    // suaviza movimento
-    ref.current.rotation.x += (ref.current.rotation.x * targetY) / 2;
-    ref.current.rotation.y += (ref.current.rotation.y * targetX) / 2;
+    const targetY = baseLocation.current.y + pointer.x * 0.3;
+    const targetX = baseLocation.current.x + pointer.y * 0.2;
+
+    ref.current.rotation.y += (targetY - ref.current.rotation.y) * 0.05;
+    ref.current.rotation.x += (targetX - ref.current.rotation.x) * 0.05;
   });
 
   const { nodes, materials } = useGLTF(
