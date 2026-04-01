@@ -1,7 +1,7 @@
 import { LuSunMedium, LuSunMoon } from "react-icons/lu";
 import { PiListDashes } from "react-icons/pi";
 import { IoIosClose } from "react-icons/io";
-import Button from "../components/Button";
+import Button from "../components/Sections/Button";
 import { useState } from "react";
 import logo from "../assets/llogodois.png";
 import { navLinks } from "../data/navLinks";

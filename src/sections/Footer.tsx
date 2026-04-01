@@ -1,5 +1,5 @@
 import logo from "../assets/llogodois.png";
-import MinIcon from "../components/MinIcon";
+import MinIcon from "../components/Sections/MinIcon";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";

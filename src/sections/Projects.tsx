@@ -1,5 +1,4 @@
-
-import Button from "../components/Button";
+import Button from "../components/Sections/Button";
 
 function Projects() {
   return (

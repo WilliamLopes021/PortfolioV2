@@ -1,9 +1,9 @@
 import { TfiEmail } from "react-icons/tfi";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsTelephone } from "react-icons/bs";
-import ContactCard from "../components/ContactCard";
-import MapCanvas from "../components/MapCanvas";
-import ContactForm from "../components/ContactForm";
+import ContactCard from "../components/Sections/ContactCard";
+import MapCanvas from "../components/Sections/MapCanvas";
+import ContactForm from "../components/Sections/ContactForm";
 
 function Contact() {
   const contactInfo = [

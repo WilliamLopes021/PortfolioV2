@@ -1,6 +1,6 @@
 import { BsCodeSlash } from "react-icons/bs";
 import { FaPeopleGroup, FaRegLightbulb } from "react-icons/fa6";
-import Button from "../components/Button";
+import Button from "../components/Sections/Button";
 
 function AboutMe() {
   const softSkills = [
