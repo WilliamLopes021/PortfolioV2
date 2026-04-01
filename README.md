@@ -1,7 +1,8 @@
 # React + Vite + ThreeJs
 
-- Início do projeto- 29/03/2026
-- Finalização da montagem do layout e introdução dos elementos 3D- 30/03/2026
+- 29/03/2026- Início do projeto
+- 30/03/2026- Finalização da montagem do layout e introdução dos elementos 3D
+- 31/03/2026- Estilização da Hero Section, posicionamento e envio de novos modelos e introdução da interatividade com os modelos
 
 [reference](https://youtu.be/kt0FrkQgw8w?si=Ov_osiqXYyCARPie)
 [conversor-de-modelos](https://gltf.pmnd.rs/)
