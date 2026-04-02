@@ -4,7 +4,7 @@ import { IoIosClose } from "react-icons/io";
 import Button from "../components/Sections/Button";
 import { useState } from "react";
 import logo from "../assets/llogodois.png";
-import { navLinks } from "../data/navLinks";
+import { navLinks } from "../constants/navLinks";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(true);
@@ -20,26 +20,36 @@ function Navbar() {
 
   return (
     <header
-      className={`p-6 w-full bg-slate-300 md:flex flex-col gap-3 md:flex-row md:items-center text-lg`}
+      className={`p-6 px-10 w-full bg-black md:flex flex-col gap-3 md:flex-row md:items-center text-lg`}
     >
       <div className={`md:flex md:gap-10 md:w-full md:justify-between`}>
         <nav className="md:flex mr-auto ">
-          <a href="#" className="">
-            <img src={logo} alt="logotipo" className="w-2xs" />
+          <a href="#" className="hover:-translate-0.5 transition-all">
+            <img src={logo} alt="logotipo" className="w-3xs" />
           </a>
           <ul className={`hidden md:flex md:items-center md:gap-6`}>
             {navLinks.map((value) => {
               return (
-                <li key={value.text} className="">
-                  <a href={value.href}> {value.text}</a>
+                <li
+                  key={value.text}
+                  className="border-b-amber-50 hover:border-b transition-all"
+                >
+                  <a href={value.href} className="text-white ">
+                    {" "}
+                    {value.text}
+                  </a>
                 </li>
               );
             })}
           </ul>
         </nav>
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center justify-center">
           <button onClick={() => toggleLight()} className="cursor-pointer">
-            {isLight ? <LuSunMedium size={30} /> : <LuSunMoon size={30} />}
+            {isLight ? (
+              <LuSunMedium size={30} color="white" />
+            ) : (
+              <LuSunMoon size={30} color="white" />
+            )}
           </button>
           <Button text="Contate-me" />
         </div>
@@ -50,7 +60,11 @@ function Navbar() {
         aria-label="abrir-menu"
         onClick={() => toggleMenu()}
       >
-        {menuOpen ? <IoIosClose size={35} /> : <PiListDashes size={30} />}
+        {menuOpen ? (
+          <IoIosClose size={35} color={"#fff"} />
+        ) : (
+          <PiListDashes size={30} color={"#fff"} />
+        )}
       </button>
       <header className="md:hidden flex flex-col gap-8 text-xl">
         <nav className={`${menuOpen ? `flex flex-col` : `hidden`} md:hidden`}>

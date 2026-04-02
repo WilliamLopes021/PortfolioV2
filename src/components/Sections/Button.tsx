@@ -10,7 +10,7 @@ function Button({
 
   return (
     <button
-      className={`${buttonColor} mx-4 p-3 ${rounded ? `rounded-full` : `rounded-lg`}`}
+      className={`${buttonColor} mx-4 px-3 py-2 cursor-pointer ${rounded ? `rounded-full` : `rounded-lg`} h-min`}
     >
       <a href={href} className={"text-shadow-white text-nowrap"}>
         {text}{" "}

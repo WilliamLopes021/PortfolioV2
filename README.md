@@ -27,10 +27,31 @@ npx gltfjsx nome-do-model.glb -t -T -o src\components\3DModels\nome.tsx
 
 ### PC
 
-- {"rotationX": 0.1 }
-- {"rotationY": 3.5 }
-- {"rotationZ": -0.1}
-- {"positionX": 0.1 }
-- {"positionY": -1.7}
-- {"positionZ": -1.5}
-- {"scale":1.0}
+```JS
+  <HackerRoom
+    scale={0.75}
+    position={[-1.2, -1.3, -2]}
+    rotation={[0.3, 3.7, 0]}
+  />
+  <group>
+    <ReactLogo
+      scale={0.4}
+      position={[0.8, 0.5, -6.5]}
+      rotation={[-0.3, -5.7, -1.7]}
+    />
+    <TypeScriptLogo
+      scale={6.3}
+      position={[-2.3, 0.3, -2.2]}
+      rotation={[-6.6, 1, 0.3]}
+    />
+  </group>
+
+```
+
+### Sanctum
+
+```JS
+   scale={1.0}
+   position={[0.1, -0.1, -4.5]}
+   rotation={[2.5, -0.7, 1.1]}
+```

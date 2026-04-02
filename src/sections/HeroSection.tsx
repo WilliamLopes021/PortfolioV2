@@ -9,7 +9,7 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { IoLogoReact } from "react-icons/io5";
 import Button from "../components/Sections/Button";
 import MinIcon from "../components/Sections/MinIcon";
-import { socialLinks } from "../data/socialLinks";
+import { socialLinks } from "../constants/socialLinks";
 import HeroCanvas from "../components/Canvas/HeroCanvas";
 
 function HeroSection() {
