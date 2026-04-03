@@ -23,7 +23,7 @@ function AboutMe() {
   ];
 
   return (
-    <section className="relative p-5 text-center md:text-justify">
+    <section className="relative p-5 text-center text-white md:text-justify bg-black">
       <header className="md:mb-10">
         <h1 className="text-5xl text-center"> Sobre mim </h1>
         <p className="text-xl text-center">
@@ -35,7 +35,7 @@ function AboutMe() {
         <div className="relative z-10 w-700 h-150 bg-slate-700">
           <AboutCanvas />
         </div>
-        <article className="p-15 pr-90">
+        <article className="p-15">
           <h2 className="text-2xl my-3">Desenvolvedor Full Stack Junior</h2>
           <p className="text-lg">
             Sou um desenvolvedor júnior com forte paixão por criar soluções web
