@@ -4,6 +4,8 @@
 - 30/03/2026- Finalização da montagem do layout e introdução dos elementos 3D
 - 31/03/2026- Estilização da Hero Section, posicionamento e envio de novos modelos e introdução da interatividade com os modelos
 - 01/04/2026- Mudança da NavBar, AboutSection e mudança no posicionamento do banner da heroSection
+- 02/04/2026- Correção da seção sobre mim, minhas skills e ínicio da seção de projetos.
+- 03/04/2026- Possível finalização?????
 
 [reference](https://youtu.be/kt0FrkQgw8w?si=Ov_osiqXYyCARPie)
 [conversor-de-modelos](https://gltf.pmnd.rs/)
