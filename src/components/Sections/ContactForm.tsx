@@ -43,10 +43,11 @@ function ContactForm() {
         id="mensage"
         name="mensage"
         maxLength={500}
-        
         placeholder="Escreva a sua mensagem ou proposta..."
       />
-      <button type="submit">Enviar Mensagem</button>
+      <button type="submit" className="bg-slate-600 rounded p-3">
+        Enviar Mensagem
+      </button>
     </form>
   );
 }

@@ -2,7 +2,6 @@ import { TfiEmail } from "react-icons/tfi";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsTelephone } from "react-icons/bs";
 import ContactCard from "../components/Sections/ContactCard";
-import MapCanvas from "../components/Sections/MapCanvas";
 import ContactForm from "../components/Sections/ContactForm";
 
 function Contact() {
@@ -23,6 +22,7 @@ function Contact() {
       icon: <IoLocationOutline color="#0286df" size={25} />,
     },
   ];
+
   return (
     <section className="mt-20 p-10">
       <h1 className="text-5xl text-center"> Entre em Contato</h1>
@@ -32,9 +32,8 @@ function Contact() {
 
       <h2 className="text-xl mt-10 mb-3 font-bold">Informações de Contato</h2>
       <p className="text-lg">
-        Estou sempre aberto a discutir novos projetos, ideias criativas ou
-        oportunidades para fazer parte de suas visões. Também estou disponível
-        para início imediato!
+        Estou sempre disponível para discutir novos projetos, ideias criativas ou
+        oportunidades para fazer parte de suas visões.
       </p>
 
       <div className="flex flex-col">
@@ -50,8 +49,10 @@ function Contact() {
         })}
       </div>
 
-      <MapCanvas />
-      <ContactForm />
+      <div>
+        <h2 className="text-5xl text-center">Me mande uma mensagem!</h2>
+        <ContactForm />
+      </div>
     </section>
   );
 }

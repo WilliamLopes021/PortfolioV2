@@ -1,10 +1,73 @@
 @import "tailwindcss";
-
-/* html {
-  min-width: 100vw;
-  min-height: 100vh;
-} */
+@import "tailwindcss-animated";
 
 * {
   scroll-behavior: smooth;
+}
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-contrast: var(--color-primary-contrast);
+
+  --color-accent: var(--color-accent);
+  --color-3d-glow: var(--color-3d-glow);
+
+  --color-success: var(--color-success);
+  --color-danger: var(--color-danger);
+}
+
+:root {
+  /* Base (neutra) */
+  --color-bg: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+
+  /* Texto */
+  --color-text: #0f172a;
+  --color-text-secondary: #64748b;
+
+  /* UI Primary (discreta) */
+  --color-primary: #64748b;
+  --color-primary-hover: #475569;
+  --color-primary-contrast: #ffffff;
+
+  /* Accent (NÃO usar em excesso no UI) */
+  --color-accent: #6366f1;
+
+  /* 3D Highlight (uso estratégico) */
+  --color-3d-glow: #22d3ee;
+
+  /* Feedback */
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+}
+
+[data-theme="dark"] {
+  /* Base */
+  --color-bg: #020617;
+  --color-surface: #020617;
+  --color-border: #0f172a;
+
+  /* Texto */
+  --color-text: #e2e8f0;
+  --color-text-secondary: #64748b;
+
+  /* UI Primary (quase apagada) */
+  --color-primary: #334155;
+  --color-primary-hover: #475569;
+  --color-primary-contrast: #f8fafc;
+
+  /* Accent */
+  --color-accent: #818cf8;
+
+  /* 3D Highlight (estrela do show) */
+  --color-3d-glow: #22d3ee;
 }

@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <header
-      className={`p-6 px-10 w-full bg-black md:flex flex-col gap-3 md:flex-row md:items-center text-lg`}
+      className={`p-6 px-10 w-full bg-bg text-text md:flex flex-col gap-3 md:flex-row md:items-center text-lg`}
     >
       <div className={`md:flex md:gap-10 md:w-full md:justify-between`}>
         <nav className="md:flex mr-auto ">
@@ -56,23 +56,32 @@ function Navbar() {
       </div>
 
       <button
-        className="md:hidden top-19 right-20 absolute cursor-pointer"
+        className="md:hidden top-19 right-12 absolute cursor-pointer"
         aria-label="abrir-menu"
         onClick={() => toggleMenu()}
       >
         {menuOpen ? (
-          <IoIosClose size={35} color={"#fff"} />
+          <IoIosClose size={35} color={"#64748b"} />
         ) : (
-          <PiListDashes size={30} color={"#fff"} />
+          <PiListDashes size={30} color={"#64748b"} />
         )}
       </button>
-      <header className="md:hidden flex flex-col gap-8 text-xl">
-        <nav className={`${menuOpen ? `flex flex-col` : `hidden`} md:hidden`}>
+      <header className="md:hidden text-text flex flex-col gap-8 items-end text-xl">
+        <nav
+          className={`${menuOpen ? `flex flex-col animate-flip-down animate-normal` : `hidden`} md:hidden`}
+        >
           <ul className={``}>
             {navLinks.map((value) => {
               return (
-                <li key={value.text}>
-                  <a href={value.href}> {value.text}</a>
+                <li
+                  key={value.text}
+                  className="w-40 mb-2"
+                >
+                  <a href={value.href} className="text-text">
+                    {" "}
+                    {value.text}
+                  </a>
+                  <span className="block w-full bg-border h-0.5"></span>
                 </li>
               );
             })}
@@ -82,7 +91,11 @@ function Navbar() {
           className={`${menuOpen ? `flex ` : `hidden`} md:hidden items-center`}
         >
           <button onClick={() => toggleLight()} className="cursor-pointer">
-            {isLight ? <LuSunMedium size={30} /> : <LuSunMoon size={30} />}
+            {isLight ? (
+              <LuSunMedium size={30} color={"#64748b"} />
+            ) : (
+              <LuSunMoon size={30} color={"#64748b"} />
+            )}
           </button>
           <Button text="Contate-me" />
         </div>

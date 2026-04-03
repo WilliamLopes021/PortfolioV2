@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import CanvasLoader from "./CanvasLoader";
 import Sanctum from "../3DModels/Sanctum";
-// import { useMediaQuery } from "react-responsive";
 
 const AboutCanvas = () => {
 

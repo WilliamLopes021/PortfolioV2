@@ -75,7 +75,7 @@ function HeroCanvas() {
               rotation={[-6.6, 1, 0.3]}
             />
           </group>
-          <ambientLight intensity={1} />
+          <ambientLight intensity={0.7} />
           <directionalLight position={[10, 10, 10]} />
         </Suspense>
       </Canvas>
