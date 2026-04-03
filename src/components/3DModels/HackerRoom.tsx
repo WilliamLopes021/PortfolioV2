@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import type { GLTF } from "three-stdlib";
 import { useRef, useEffect, type JSX } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
@@ -23,6 +23,7 @@ type GLTFResult = GLTF & {
 const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
   const ref = useRef<THREE.Group>(null!);
   const baseLocation = useRef<THREE.Euler | null>(null);
+  const monitorTexture = useTexture("textures/image.png");
 
   const { pointer } = useThree();
 
@@ -58,7 +59,9 @@ const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
             <mesh
               geometry={nodes.Setup_Material001_0.geometry}
               material={materials["Material.001"]}
-            />
+            >
+              <meshMatcapMaterial map={monitorTexture} />
+            </mesh>
           </group>
           <mesh
             geometry={nodes.Room_Material_0.geometry}
