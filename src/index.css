@@ -12,6 +12,7 @@
 
   --color-text: var(--color-text);
   --color-text-secondary: var(--color-text-secondary);
+  --color-text-banner: var(--color-text-banner);
 
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
@@ -33,6 +34,7 @@
   /* Texto */
   --color-text: #0f172a;
   --color-text-secondary: #64748b;
+  --color-text-banner: #e2e8f0;
 
   /* UI Primary (discreta) */
   --color-primary: #64748b;

@@ -5,12 +5,11 @@ import CanvasLoader from "./CanvasLoader";
 import Sanctum from "../3DModels/Sanctum";
 
 const AboutCanvas = () => {
-
   return (
     <>
-      <Canvas className="absolute size-full bg-black">
+      <Canvas className="absolute size-full bg-bg">
         <Suspense fallback={<CanvasLoader />}>
-          <PerspectiveCamera makeDefault position={[0, 0, 0]} />
+          <PerspectiveCamera makeDefault position={[0, 0, 3]} />
           <Sanctum />
         </Suspense>
       </Canvas>

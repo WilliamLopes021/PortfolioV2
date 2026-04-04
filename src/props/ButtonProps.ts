@@ -1,6 +1,6 @@
 export interface ButtonProps {
   text: string;
-  color?: "dark" | "light" | "blue";
-  rounded?: boolean;
+  color: "primary" | "success" | "danger";
   href?: string;
+  rounded?: boolean;
 }

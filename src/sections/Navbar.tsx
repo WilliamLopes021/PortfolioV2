@@ -3,11 +3,11 @@ import { PiListDashes } from "react-icons/pi";
 import { IoIosClose } from "react-icons/io";
 import Button from "../components/Sections/Button";
 import { useState } from "react";
-import logo from "../assets/llogodois.png";
+import logo from "../assets/logoPreta.png";
 import { navLinks } from "../constants/navLinks";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState<boolean>(true);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isLight, setIsLight] = useState<boolean>(true);
 
   const toggleMenu = () => {
@@ -24,7 +24,7 @@ function Navbar() {
     >
       <div className={`md:flex md:gap-10 md:w-full md:justify-between`}>
         <nav className="md:flex mr-auto ">
-          <a href="#" className="hover:-translate-0.5 transition-all">
+          <a href="#" className="hover:-translate-0.5 transition-all mx-4">
             <img src={logo} alt="logotipo" className="w-3xs" />
           </a>
           <ul className={`hidden md:flex md:items-center md:gap-6`}>
@@ -32,12 +32,10 @@ function Navbar() {
               return (
                 <li
                   key={value.text}
-                  className="border-b-amber-50 hover:border-b transition-all"
+                  className="hover:-translate-y-1 text-text hover:text-primary-hover transition-all cursor-pointer"
                 >
-                  <a href={value.href} className="text-white ">
-                    {" "}
-                    {value.text}
-                  </a>
+                  <a href={value.href}> {value.text}</a>
+                  <span className="block w-full h-0.5 bg-border"></span>
                 </li>
               );
             })}
@@ -46,17 +44,17 @@ function Navbar() {
         <div className="hidden md:flex items-center justify-center">
           <button onClick={() => toggleLight()} className="cursor-pointer">
             {isLight ? (
-              <LuSunMedium size={30} color="white" />
+              <LuSunMedium size={30} color="#64748b" />
             ) : (
-              <LuSunMoon size={30} color="white" />
+              <LuSunMoon size={30} color="#64748b" />
             )}
           </button>
-          <Button text="Contate-me" />
+          <Button color="primary" text="Contate-me" />
         </div>
       </div>
 
       <button
-        className="md:hidden top-19 right-12 absolute cursor-pointer"
+        className="md:hidden top-15 right-12 absolute cursor-pointer"
         aria-label="abrir-menu"
         onClick={() => toggleMenu()}
       >
@@ -73,10 +71,7 @@ function Navbar() {
           <ul className={``}>
             {navLinks.map((value) => {
               return (
-                <li
-                  key={value.text}
-                  className="w-40 mb-2"
-                >
+                <li key={value.text} className="w-40 mb-2">
                   <a href={value.href} className="text-text">
                     {" "}
                     {value.text}
@@ -97,7 +92,7 @@ function Navbar() {
               <LuSunMoon size={30} color={"#64748b"} />
             )}
           </button>
-          <Button text="Contate-me" />
+          <Button color="primary" text="Contate-me" />
         </div>
       </header>
     </header>

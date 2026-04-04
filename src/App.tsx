@@ -1,20 +1,20 @@
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
-// import HeroSection from "./sections/HeroSection";
-// import AboutMe from "./sections/AboutMe";
+import HeroSection from "./sections/HeroSection";
+import AboutMe from "./sections/AboutMe";
+import Skills from "./sections/Skills";
 // import Contact from "./sections/Contact";
-// import Skills from "./sections/Skills";
 
 function App() {
   return (
     <>
       <Navbar />
-      {/* <main>
+      <main>
         <HeroSection />
         <AboutMe />
         <Skills />
-        <Contact />
-      </main> */}
+        {/* <Contact /> */}
+      </main>
       <Footer />
     </>
   );
