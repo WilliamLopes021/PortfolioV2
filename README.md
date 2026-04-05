@@ -1,64 +1,44 @@
-# React + Vite + ThreeJs
+# Portfolio V2
 
-- 29/03/2026- Início do projeto
-- 30/03/2026- Finalização da montagem do layout e introdução dos elementos 3D
-- 31/03/2026- Estilização da Hero Section, posicionamento e envio de novos modelos e introdução da interatividade com os modelos
-- 01/04/2026- Mudança da NavBar, AboutSection e mudança no posicionamento do banner da heroSection
-- 02/04/2026- Correção da seção sobre mim, minhas skills e ínicio da seção de projetos.
-- 03/04/2026- Possível finalização?????
+## Descrição
 
-[reference](https://youtu.be/kt0FrkQgw8w?si=Ov_osiqXYyCARPie)
-[conversor-de-modelos](https://gltf.pmnd.rs/)
-Desenvolvimento...
+Este é o meu portfólio pessoal versão 2, uma aplicação web interativa que apresenta meus projetos, habilidades e experiências. O projeto inclui elementos 3D para uma experiência visual imersiva, destacando minha paixão por design e tecnologia.
 
-## Codegen command
+## Tecnologias Utilizadas
 
-npx gltfjsx nome-do-model.glb -t -T -o caminho/de/saida/arquivo.tsx
-npx gltfjsx nome-do-model.glb -t -T -o src\components\3DModels\nome.tsx
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Framework**: React.js para componentes reutilizáveis e gerenciamento de estado
+- **3D Graphics**: Three.js para renderização de modelos 3D e animações
+- **Build Tool**: Vite para desenvolvimento rápido e otimização de produção
+- **Styling**: Tailwind CSS para estilos responsivos e modernos
+- **Outros**: Git para controle de versão, Node.js para dependências
 
-## Position Notations
+## Modelos 3D
 
-### Door
+Os modelos 3D foram implementados utilizando a biblioteca Three.js, que permite a criação de cenas 3D no navegador via WebGL. Os modelos incluem objetos como cubos animados, esferas e formas geométricas personalizadas para representar projetos ou seções do portfólio.
 
-- {"rotationX":-6.3}
-- {"rotationY":-8.3}
-- {"rotationZ":-0.3}
-- {"positionX":-0.7}
-- {"positionY":-2.1}
-- {"positionZ":0.7}
-- {"scale":1.0}
+### Implementação
 
-### PC
+1. **Carregamento de Modelos**: Modelos foram criados programaticamente em Three.js (ex.: geometrias básicas como `BoxGeometry` e `SphereGeometry`) ou importados de arquivos GLTF/OBJ externos, carregados via `GLTFLoader`.
+2. **Animações**: Utilizei o sistema de animação do Three.js com `requestAnimationFrame` para rotações suaves e transições, integradas com o ciclo de vida do React para sincronização.
+3. **Interatividade**: Adicionei controles de câmera (como `OrbitControls`) para permitir ao usuário explorar os modelos 3D, e eventos de mouse para interações (ex.: hover para destacar elementos).
+4. **Otimização**: Implementei LOD (Level of Detail) e texturas comprimidas para melhorar o desempenho em dispositivos móveis.
 
-```JS
-  <HackerRoom
-    scale={0.75}
-    position={[-1.2, -1.3, -2]}
-    rotation={[0.3, 3.7, 0]}
-  />
-  <group>
-    <ReactLogo
-      scale={0.4}
-      position={[0.8, 0.5, -6.5]}
-      rotation={[-0.3, -5.7, -1.7]}
-    />
-    <TypeScriptLogo
-      scale={6.3}
-      position={[-2.3, 0.3, -2.2]}
-      rotation={[-6.6, 1, 0.3]}
-    />
-  </group>
+## Instalação
 
-```
+1. Clone o repositório: `git clone https://github.com/seu-usuario/portfolioV2.git`
+2. Navegue para o diretório: `cd portfolioV2`
+3. Instale as dependências: `npm install`
+4. Execute o projeto: `npm run dev`
 
-### Sanctum
+## Uso
 
-```JS
-   scale={1.0}
-   position={[0.1, -0.1, -4.5]}
-   rotation={[2.5, -0.7, 1.1]}
-```
+Abra o navegador e acesse `http://localhost:5173` para visualizar o portfólio. Navegue pelas seções para explorar projetos e interagir com os elementos 3D.
 
-## Tarefas
+## Contribuição
 
-- Fazer a seção de skills e projetos.
+Sinta-se à vontade para abrir issues ou pull requests para melhorias.
+
+## Licença
+
+Este projeto está sob a licença MIT.

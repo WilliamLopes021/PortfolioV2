@@ -23,7 +23,7 @@ function AboutMe() {
   ];
 
   return (
-    <section className="text-center md:text-justify bg-bg pt-40">
+    <section className="text-center md:text-justify bg-bg mb-40" id="sobre">
       <header className="md:mb-10 text-text">
         <h1 className="text-5xl text-center"> Sobre mim </h1>
         <p className="text-xl text-center">
@@ -61,7 +61,9 @@ function AboutMe() {
               );
             })}
           </section>
-          <Button text="Download CV" color="primary" rounded={true} />
+          <a href="files/CurriculoNovoAtualizado.pdf" download={true}>
+              <Button text="Download CV" color="primary" rounded={true} />
+          </a>
         </article>
       </main>
     </section>

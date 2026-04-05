@@ -17,7 +17,7 @@ function HeroCanvas() {
 
   return (
     <>
-      <Canvas className="size-full bg-primary">
+      <Canvas className="size-full bg-primary" style={{overflow: 'auto'}}>
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[0, 0, 0]} />
           <HackerRoom

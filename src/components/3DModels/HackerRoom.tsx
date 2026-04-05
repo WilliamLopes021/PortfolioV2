@@ -23,7 +23,7 @@ type GLTFResult = GLTF & {
 const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
   const ref = useRef<THREE.Group>(null!);
   const baseLocation = useRef<THREE.Euler | null>(null);
-  const monitorTexture = useTexture("textures/image.png");
+  const monitorTexture = useTexture("textures/eubonito.jpeg");
 
   const { pointer } = useThree();
 
@@ -48,9 +48,7 @@ const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
   ) as unknown as GLTFResult;
 
   return (
-    <group {...props} dispose={null} 
-    ref={ref}
-    >
+    <group {...props} dispose={null} ref={ref}>
       <group scale={0.01}>
         <group position={[-34.318, 228.922, 250.863]}>
           <group position={[-19.58, -129.73, -69.708]}>
@@ -65,14 +63,14 @@ const HackerRoom = (props: JSX.IntrinsicElements["group"]) => {
               <meshMatcapMaterial map={monitorTexture} />
             </mesh>
           </group>
-          {/* <mesh
+          <mesh
             geometry={nodes.Room_Material_0.geometry}
             material={materials.Material}
-          /> */}
-          {/* <mesh
+          />
+          <mesh
             geometry={nodes.Room_EEVEE_Architectural_Glass_0.geometry}
             material={materials.EEVEE_Architectural_Glass}
-          /> */}
+          />
           <mesh
             geometry={nodes.Chair_Material_0.geometry}
             material={materials.Material}

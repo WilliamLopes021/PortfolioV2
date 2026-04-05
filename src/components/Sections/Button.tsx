@@ -4,7 +4,7 @@ function Button({
   text,
   color = "primary",
   rounded = false,
-  href = "",
+  href,
 }: ButtonProps) {
   let buttonColor: string;
   switch (color) {

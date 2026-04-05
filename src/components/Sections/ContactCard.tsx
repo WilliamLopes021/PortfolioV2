@@ -2,8 +2,8 @@ import type { ContactCardProps } from "../../props/ContactCardProps";
 
 function ContactCard({icon, contact, type}: ContactCardProps) {
   return (
-    <div className="p-6 flex border my-3 border-zinc-200 rounded-xl shadow-xl">
-      <div className="bg-sky-100 w-min p-3 rounded-xl">
+    <div className="p-6 flex border my-3 border-border rounded-xl shadow-xl bg-bg hover:-translate-y-1 transition-all">
+      <div className="bg-primary-contrast w-min p-3 rounded-xl">
         {icon}
       </div>
       <div className="flex flex-col pl-3 ">

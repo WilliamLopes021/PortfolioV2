@@ -24,7 +24,7 @@ function HeroSection() {
   ];
 
   return (
-    <section className="w-full relative pointer-events-none" id="inicio">
+    <section className="w-full relative pointer-events-none mb-40" id="inicio">
       <div className="absolute inset-0 z-0">
         <HeroCanvas />
       </div>
@@ -57,7 +57,7 @@ function HeroSection() {
           text="Ver Projetos"
           href="https://github.com/WilliamLopes021?tab=repositories"
         />
-        <Button color="primary" text="Entre em Contato" href="#contato"/>
+        <Button color="primary" text="Entre em Contato" href="https://wa.me/5511954809111"/>
 
         <div className="flex gap-3 pointer-events-auto">
           <MinIcon icon={<FiGithub size={25} />} url={socialLinks.github} />

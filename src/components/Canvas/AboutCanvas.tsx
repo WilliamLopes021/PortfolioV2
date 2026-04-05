@@ -7,7 +7,7 @@ import Sanctum from "../3DModels/Sanctum";
 const AboutCanvas = () => {
   return (
     <>
-      <Canvas className="absolute size-full bg-bg">
+      <Canvas className="absolute size-full bg-bg" style={{ overflow: "auto" }}>
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[0, 0, 3]} />
           <Sanctum />
