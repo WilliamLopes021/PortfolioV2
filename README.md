@@ -26,7 +26,7 @@ Os modelos 3D foram implementados utilizando a biblioteca Three.js, que permite 
 
 ## Instalação
 
-1. Clone o repositório: `git clone https://github.com/seu-usuario/portfolioV2.git`
+1. Clone o repositório: `git clone https://github.com/WilliamLopes021/portfolioV2.git`
 2. Navegue para o diretório: `cd portfolioV2`
 3. Instale as dependências: `npm install`
 4. Execute o projeto: `npm run dev`
